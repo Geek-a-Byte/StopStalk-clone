@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend:wght@600&family=Noto+Sans+Bengali:wght@300&display=swap');
+h1 #title{
+    font-family: 'Lexend', sans-serif;
+}
+
+
+:root {
+    --color-primary: #1b3039;
+    --color-dark: #343535;
+    --color-light: #f4f4f4;
+    --color-shade: #a9a5a5;
+
+    --badge-size: 120px;
+
+    --lock-color: #fff;
+    --lock-width: 100px;
+    --lock-stroke: 2.5px;
+
+}
+
+
+
+body {
+    background-color: var(--color-light);
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.badge-icon,
+.badge-text {
+    padding: 1.5rem;
+    float: left;
+    -webkit-box-flex: 1;
+    flex: 1
+}
+
+.badge {
+    display: flex;
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+
+    color: var(--color-light);
+
+    min-width: var(--badge-size);
+    border-radius: 5px;
+    /* box-shadow: 0px 0px 60px var(--color-shade); */
+
+    overflow: hidden;
+}
+
+.badge-icon {
+    background:  url("./cses.png") var(--color-primary) no-repeat center center;
+    background-size: contain;
+    max-width: calc(var(--badge-size) / 5+20);
+}
+
+.badge-text {
+    /* font: normal small-caps normal 16px/1.5 Arial, Helvetica, sans-serif; */
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: left;
+}
+
+.badge[data-color=""] .badge-text,
+.badge[data-color="default"] .badge-text {
+    color: var(--color-light);
+    background-color: var(--color-primary);
+}
+
+.badge[data-color="light"] .badge-text {
+    color: var(--color-dark);
+    background-color: var(--color-light);
+}
+
+.badge[data-color="dark"] .badge-text {
+    color: var(--color-light);
+    background-color: var(--color-dark);
+}
+
+
+
+
+
