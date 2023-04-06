@@ -1,16 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend:wght@600&family=Noto+Sans+Bengali:wght@300&display=swap');
-h1 #title{
+
+#title{
     font-family: 'Lexend', sans-serif;
+    font-size: 35px;
+    color:rgb(56, 106, 163);
+    background-color:rgb(224, 235, 238);
 }
-
-
+#username {
+    font-family: 'Lexend', sans-serif;
+    font-size: 10px;
+    color: rgb(56, 106, 163);
+    background-color: rgb(224, 235, 238);
+}
 :root {
-    --color-primary: #1b3039;
-    --color-dark: #343535;
-    --color-light: #f4f4f4;
-    --color-shade: #a9a5a5;
+    --color-primary: #192023;
+    --color-dark: #0e0e0e;
+    --color-light: #cfdeed;
+    --color-shade: #e4e2e2;
 
-    --badge-size: 120px;
+    --badge-size: 180px;
 
     --lock-color: #fff;
     --lock-width: 100px;
@@ -31,8 +39,9 @@ main {
 }
 
 .badge-icon,
-.badge-text {
-    padding: 1.5rem;
+.badge-text,
+.badge-icon {
+    padding: 1rem;
     float: left;
     -webkit-box-flex: 1;
     flex: 1
@@ -43,45 +52,54 @@ main {
     margin-bottom: 1.5rem;
     margin-right: 1.5rem;
 
-    color: var(--color-light);
+    background: var(--color-light);
 
     min-width: var(--badge-size);
     border-radius: 5px;
-    /* box-shadow: 0px 0px 60px var(--color-shade); */
+    box-shadow: 0px 0px 10px var(--color-shade);
 
     overflow: hidden;
 }
 
 .badge-icon {
-    background:  url("./cses.png") var(--color-primary) no-repeat center center;
-    background-size: contain;
-    max-width: calc(var(--badge-size) / 5+20);
+    background:  url("./cses.png") rgb(6, 26, 49) no-repeat center center;
+    background-size:contain;
+    background-origin: padding-box;
+    padding-left: 15%;
+    max-width: calc(var(--badge-size)/5);
+    /* max-width: calc(var(--badge-size) / 0.2); */
 }
 
 .badge-text {
+    font-family: 'Lexend', sans-serif;
+    font-size: 15px;
+    
     /* font: normal small-caps normal 16px/1.5 Arial, Helvetica, sans-serif; */
     text-transform: uppercase;
     line-height: 1;
     text-align: left;
 }
 
-.badge[data-color=""] .badge-text,
+.badge[data-color=""]
 .badge[data-color="default"] .badge-text {
     color: var(--color-light);
     background-color: var(--color-primary);
 }
 
-.badge[data-color="light"] .badge-text {
+.badge[data-color="light"]{
     color: var(--color-dark);
     background-color: var(--color-light);
 }
 
-.badge[data-color="dark"] .badge-text {
+.badge[data-color="dark"] {
     color: var(--color-light);
     background-color: var(--color-dark);
 }
 
 
-
+.badge-text{
+    color: rgb(56, 106, 163);
+        background-color: rgb(224, 235, 238);
+}
 
 
