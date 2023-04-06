@@ -9,13 +9,12 @@
 #username {
     font-family: 'Lexend', sans-serif;
     font-size: 10px;
-    color: rgb(56, 106, 163);
-    background-color: rgb(224, 235, 238);
+    color: rgb(255, 255, 255);
 }
 :root {
     --color-primary: #192023;
     --color-dark: #0e0e0e;
-    --color-light: #cfdeed;
+    --color-light: rgb(252, 252, 252);
     --color-shade: #e4e2e2;
 
     --badge-size: 180px;
@@ -26,11 +25,6 @@
 
 }
 
-
-
-body {
-    background-color: var(--color-light);
-}
 
 main {
     display: flex;
@@ -44,19 +38,20 @@ main {
     padding: 1rem;
     float: left;
     -webkit-box-flex: 1;
-    flex: 1
+    flex: 1;
+    
 }
 
 .badge {
     display: flex;
     margin-bottom: 1.5rem;
     margin-right: 1.5rem;
-
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.138), 0 5px 5px #9393ee;
     background: var(--color-light);
 
     min-width: var(--badge-size);
     border-radius: 5px;
-    box-shadow: 0px 0px 10px var(--color-shade);
+    /* box-shadow: 0px 0px 10px var(--color-shade); */
 
     overflow: hidden;
 }
@@ -98,8 +93,8 @@ main {
 
 
 .badge-text{
-    color: rgb(56, 106, 163);
-        background-color: rgb(224, 235, 238);
+    color: rgb(255, 255, 255);
+    background-color: rgb(57, 53, 53);
 }
 
 
