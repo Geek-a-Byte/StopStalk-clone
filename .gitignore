@@ -7441,3 +7441,6 @@ __pycache__/hr_scraper.cpython-37.pyc
 Scripts/dotenv.exe
 __pycache__/cf_scraper.cpython-37.pyc
 __pycache__/toph_scraper.cpython-37.pyc
+templates/index.html
+__pycache__/spoj_scraper.cpython-37.pyc
+__pycache__/uva_scraper.cpython-37.pyc

@@ -1,7 +1,7 @@
 
 window.onload = function(){
   const percent = document.getElementById('percent');
-  var val = parseInt($(percent).val())/1500*100;
+  var val = parseInt($(percent).val())/1200*100;
   val=val.toFixed(2);
   // var calc=val*100;
   // var val = calc;

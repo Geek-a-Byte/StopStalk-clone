@@ -28,7 +28,7 @@
     left: 50%;
     top: 50%;
     /* box-shadow: inset 0 0 1em black; */
-    content: attr(data-pct)"/1500";
+    content: attr(data-pct)"/1200";
     margin-top: -80px;
     margin-left: -80px;
     border-radius: 100%;
