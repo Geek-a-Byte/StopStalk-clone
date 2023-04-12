@@ -15,10 +15,14 @@ urls = [cses_sc.cses_url,
         'https://www.hackerrank.com/'+hr_sc.payload['username']
         ]
 
+tot_all=0
+for i in solved:
+    tot_all+=int(i)
+    
 
 @app.route('/')
 def index():
-    return render_template('index.html', oj_count_username_url=zip(oj, solved, usernames,urls))
+    return render_template('index.html',   oj_count_username_url=zip(oj, solved, usernames,urls), tot_all=tot_all)
 
 # main driver function
 if __name__ == '__main__': 
