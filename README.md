@@ -1,7 +1,7 @@
 # StopStalk-clone
 A static problem-solving profile creator for portfolio building
 
-![image](https://user-images.githubusercontent.com/59027621/231426494-03f5abba-2750-4e6e-ac66-9ac91a4dac5e.png)
+![image](https://user-images.githubusercontent.com/59027621/231530513-5173640b-8257-4025-8efd-a940ab084ea4.png)
 
 ### ``additional resources``
 - https://stackoverflow.com/questions/68446751/password-protection-for-public-github
