@@ -21,6 +21,7 @@ window.onload = function(){
     
     $circle.css({ strokeDashoffset: pct});
     
-    $('#cont').attr('data-pct',val);
+    $('#cont').attr('data-pct', parseInt($(percent).val()));
+    $('#cont2').attr('data-pct2', val);
   }
 }

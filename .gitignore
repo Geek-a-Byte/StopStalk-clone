@@ -7439,3 +7439,5 @@ Lib/site-packages/python_dotenv-0.21.1.dist-info/WHEEL
 __pycache__/hr_scraper.cpython-37.pyc
 .gitignore
 Scripts/dotenv.exe
+__pycache__/cf_scraper.cpython-37.pyc
+__pycache__/toph_scraper.cpython-37.pyc

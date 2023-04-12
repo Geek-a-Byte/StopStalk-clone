@@ -15,28 +15,44 @@
     <div class="left text-left">
     <h1>StopStalk</h1>
     <div class="right text-right" id="cont" data-pct="100">
+        <span id="cont2"></span>
         <svg id="svg" width="200" height="200" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
             <circle r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0"></circle>
             <circle id="bar" r="90" cx="100" cy="100" fill="transparent" stroke-dasharray="565.48" stroke-dashoffset="0">
             </circle>
         </svg>
     </div>
-    <label for="percent">Total Solve Count out of 1500</label>
+    <div style="margin-bottom:5px">
+    <label for="percent">Total solved</label>
     <input id="percent" name="percent" value="{{ tot_all }}">
+    <label for="percent">out of 1500</label>
+    </div>
+    
+    
     <br>
     <main>
-        {% for i,j,k,l in oj_count_username_url %}
-        <div class="badge" data-color="dark">
-            <div class="badge-icon" style="background-image: url('/static/{{i}}.png')">
-                <span class="lock"></span>
-            </div>
-            <div class="badge-text">
-                <div><a href="{{ l }}" id="username">{{ k }}</a></div>
-                <span>{{ j }}</span>
-            </div>
+    <div class="grid-container">
+    {% for a,i,j,k,l in oj_count_username_url %}
+    
+    <div class="badge" data-color="dark">
+        <div class="badge-icon" style="background-image: url('/static/{{i}}.png')">
+            <span class="lock"></span>
         </div>
-        {% endfor %}
+        <div class="badge-text">
+            <div><a href="{{ l }}" id="username">{{ k }}</a></div>
+            <span>{{ j }}</span>
+        </div>
+    </div>
+    
+    {% endfor %}
+    </div>
+        
+
     </main>
+       
+
+        
+    </div>
     </div>
 
   
