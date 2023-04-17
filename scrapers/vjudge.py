@@ -33,11 +33,11 @@ oj = ['SPOJ', 'UVA', 'CodeForces',  'Aizu', 'LightOJ', 'CodeChef', 'AtCoder', 'H
 
 for item in keysList1: 
   if item not in oj:
-     print(item)
+    #  print(item)
      number1+=len(datum[item])
 
 for item in keysList2: 
   if item not in oj:
-     print(item)
+    #  print(item)
      number2+=len(datum2[item])
 

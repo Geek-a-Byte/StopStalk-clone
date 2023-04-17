@@ -24,4 +24,4 @@ df2 = pd.read_html(str(table))[2]
 
 df = pd.DataFrame(df1)
 cses = df.iloc[0]['solved tasks']
-
+print(f"{cses_username} has solved {cses} problems on CC")

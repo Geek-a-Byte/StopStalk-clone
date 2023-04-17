@@ -12,7 +12,7 @@ numeric_part_list = re.findall('\d+', judge_id)
 id = ''.join(numeric_part_list)
 
 # Print the numeric part as a string
-print(id)
+# print(id)
 
 # Make the API request
 url = f'https://timus.online/author.aspx?id={id}'

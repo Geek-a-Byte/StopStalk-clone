@@ -13,7 +13,7 @@ ratings = soap.find_all('section', class_ = 'rating-data-section problems-solved
 
 rat = ratings[0]
 h51,h52=rat.find_all('h5')
-print(h51)
+# print(h51)
 
 number=0
 if h51 is not None:

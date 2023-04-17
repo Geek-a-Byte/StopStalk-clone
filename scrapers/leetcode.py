@@ -66,6 +66,6 @@ try:
   df_advanced= pd.DataFrame(df_data3)
   df_total = pd.DataFrame(df_data4)
   leetcode = df_total.iloc[0]['count']
-  print(leetcode)
+  print(f"{lc_user} has solved {leetcode} problems on Leetcode")
 except:
   print("The user does not exist!")

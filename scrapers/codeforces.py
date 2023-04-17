@@ -51,8 +51,6 @@ def call(method, key=None, secret=None, user=''):
     url = urllib.parse.urljoin(CODEFORCES_API_URL, "%s" % method)
 
     with requests.get(url, params=params) as res:
-        # print(params)
-        print(url)
         if res.status_code == 404:
             data = {'status': 'FAILED', 'comment': "%s: No such method" % method}
         elif res.status_code in (429, 503):
@@ -83,5 +81,6 @@ cf = 0
 if(type(solvedSet)==set):
 #   print(solvedSet)
   cf = len(solvedSet)
+  print(f"{user} has solved {cf} problems on codeforces")
 else:
   print('error')

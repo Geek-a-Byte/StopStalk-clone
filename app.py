@@ -45,7 +45,7 @@ urls = [cses.cses_url,
         timus.url, 
         codechef.url,
         atcoder.profile_url,
-        vjudge.url_2
+        'https://vjudge.net/user/'+vjudge.username_2
         ]
 
 tot_all=0
