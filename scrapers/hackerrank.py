@@ -29,10 +29,10 @@ base_url = "https://www.hackerrank.com/"
 user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
 login_url = base_url + "auth/login"
 submissions_url = base_url + "rest/contests/master/submissions/?offset={}&limit={}"
-hackos_url= base_url + "rest/hackers/geek_a_byte32/hackos/?offset={}&limit={}"
+hackos_url= base_url + "rest/hackers/"+payload['username']+"/hackos/?offset={}&limit={}"
 
-username, password = "geek_a_byte32", os.getenv("hr_password")
-pages, timeout = 300,10
+username, password = payload['username'], payload['password']
+# pages, timeout = 300,10
 
 session = requests.Session()  # log in
 logon_response = session.post(

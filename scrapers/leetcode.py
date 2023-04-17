@@ -4,6 +4,7 @@ import requests
 from bs4 import BeautifulSoup
 import json
 
+#username
 lc_user = "nazia32"
 api_endpoint = f"https://leetcode.com/graphql"
 

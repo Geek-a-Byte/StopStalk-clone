@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 import pandas as pd
 
+#username
 loj_username = "geek-a-byte"
 loj_url = f"https://lightoj.com/user/{loj_username}/"
 
