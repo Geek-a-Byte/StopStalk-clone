@@ -16,7 +16,8 @@ cf_api_secret = '<create and copy api secret using your codeforces account and p
 - do not commit the .env file to github for privacy purposes of your password and api keys, add it to .gitignore instead
 - push your changes (username, env file) to github and deploy with render 
 
-![image](https://user-images.githubusercontent.com/59027621/232427926-4643aed2-cea5-4fa0-b59b-d8fa01cf1cb5.png)
+![ss](https://user-images.githubusercontent.com/59027621/232550423-f66ca106-d560-4d75-ad90-9769cd314bef.png)
+
 
 ### ``additional resources``
 -  https://blog.gitguardian.com/how-to-handle-secrets-in-python/
