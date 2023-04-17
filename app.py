@@ -9,7 +9,7 @@ solved =[
          int(cses.cses),
          int(lightoj.loj), 
          int(leetcode.leetcode), 
-         int(hackerrank.total_count), 
+         int(hackerrank.number), 
          int(codeforces.cf), 
          int(toph.toph),
          int(spoj.spoj),
