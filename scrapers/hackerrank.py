@@ -45,8 +45,9 @@ logon_response = s.post(
 cookies, headers = s.cookies.get_dict(), logon_response.request.headers
 
 r2 = s.get(hackos_url.format(username,0, 1000), headers=headers)
-datum = r2.json()['models']
-
+print(r2.status_code)
+datum = r2.json()
+datum = datum['models']
 # print(datum)
 number=0
 total_count=set();
