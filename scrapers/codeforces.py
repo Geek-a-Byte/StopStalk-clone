@@ -51,7 +51,7 @@ def call(method, key=None, secret=None, user=''):
     url = urllib.parse.urljoin(CODEFORCES_API_URL, "%s" % method)
 
     with requests.get(url, params=params) as res:
-        print(params)
+        # print(params)
         print(url)
         if res.status_code == 404:
             data = {'status': 'FAILED', 'comment': "%s: No such method" % method}
@@ -80,7 +80,7 @@ api_secret = os.getenv("cf_api_secret")
 solvedSet = call('user.status',api_key,api_secret,user)
 cf = 0
 if(type(solvedSet)==set):
-  print(solvedSet)
+#   print(solvedSet)
   cf = len(solvedSet)
 else:
   print('error')

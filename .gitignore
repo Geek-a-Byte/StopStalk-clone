@@ -7444,3 +7444,15 @@ __pycache__/toph_scraper.cpython-37.pyc
 templates/index.html
 __pycache__/spoj_scraper.cpython-37.pyc
 __pycache__/uva_scraper.cpython-37.pyc
+scrapers/__pycache__/atcoder.cpython-37.pyc
+scrapers/__pycache__/codechef.cpython-37.pyc
+scrapers/__pycache__/codeforces.cpython-37.pyc
+scrapers/__pycache__/cses.cpython-37.pyc
+scrapers/__pycache__/hackerearth.cpython-37.pyc
+scrapers/__pycache__/hackerrank.cpython-37.pyc
+scrapers/__pycache__/leetcode.cpython-37.pyc
+scrapers/__pycache__/lightoj.cpython-37.pyc
+scrapers/__pycache__/spoj.cpython-37.pyc
+scrapers/__pycache__/timus.cpython-37.pyc
+scrapers/__pycache__/toph.cpython-37.pyc
+scrapers/__pycache__/uva.cpython-37.pyc

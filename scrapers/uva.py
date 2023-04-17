@@ -23,7 +23,7 @@ soup = BeautifulSoup(response.content, "html.parser")
 # Parse the response JSON
 datum = response.json()['subs']
 
-print(datum)
+# print(datum)
 
 empty_set = set()
        

@@ -19,8 +19,8 @@ cses_soup = BeautifulSoup(cses_response.content, "html.parser")
 table = cses_soup.find_all('table')
 df1 = pd.read_html(str(table))[1]
 df2 = pd.read_html(str(table))[2]
-print(df1)
-print(df2)
+# print(df1)
+# print(df2)
 
 df = pd.DataFrame(df1)
 cses = df.iloc[0]['solved tasks']
