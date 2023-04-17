@@ -1,10 +1,10 @@
 from flask import Flask, render_template
 import scrapers
-from scrapers import cses, codeforces, hackerrank, leetcode, lightoj, spoj, timus, uva, toph, codechef, atcoder
+from scrapers import cses, codeforces, hackerrank, leetcode, lightoj, spoj, timus, uva, toph, codechef, atcoder,vjudge
 app = Flask(__name__)
 
-oj_index=[1,2,3,4,5,6,7,8,9,10,11]
-oj = ['cses', 'loj', 'leetcode','hackerrank','codeforces','toph', 'spoj','uva','timus','codechef','atcoder']
+oj_index=[1,2,3,4,5,6,7,8,9,10,11,12,13]
+oj = ['cses', 'loj', 'leetcode','hackerrank','codeforces','toph', 'spoj','uva','timus','codechef','atcoder', 'vjudge','vjudge']
 solved =[
          int(cses.cses),
          int(lightoj.loj), 
@@ -16,7 +16,9 @@ solved =[
          int(uva.uva),
          int(timus.number),
          int(codechef.number),
-         int(atcoder.number)
+         int(atcoder.number),
+         int(vjudge.number1),
+         int(vjudge.number2),
          ]
 
 
@@ -30,7 +32,9 @@ usernames =[cses.cses_username,
             uva.username,
             timus.id,
             codechef.username,
-            atcoder.username
+            atcoder.username,
+            vjudge.username_1,
+            vjudge.username_2
             ]
 urls = [cses.cses_url, 
         lightoj.loj_url, 
@@ -42,7 +46,9 @@ urls = [cses.cses_url,
         uva.profile_url,
         timus.url, 
         codechef.url,
-        atcoder.profile_url
+        atcoder.profile_url,
+        vjudge.url_1,
+        vjudge.url_2
         ]
 
 tot_all=0
