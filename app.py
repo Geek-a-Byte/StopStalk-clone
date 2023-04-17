@@ -3,13 +3,13 @@ import scrapers
 from scrapers import cses, codeforces, hackerrank, leetcode, lightoj, spoj, timus, uva, toph, codechef, atcoder,vjudge
 app = Flask(__name__)
 
-oj_index=[1,2,3,4,5,6,7,8,9,10,11,12,13]
-oj = ['cses', 'loj', 'leetcode','hackerrank','codeforces','toph', 'spoj','uva','timus','codechef','atcoder', 'vjudge','vjudge']
+oj_index=[1,2,3,4,5,6,7,8,9,10,11,12]
+oj = ['cses', 'loj', 'leetcode','hackerrank','codeforces','toph', 'spoj','uva','timus','codechef','atcoder', 'vjudge']
 solved =[
          int(cses.cses),
          int(lightoj.loj), 
          int(leetcode.leetcode), 
-         int(hackerrank.number), 
+         int(hackerrank.total_count), 
          int(codeforces.cf), 
          int(toph.toph),
          int(spoj.spoj),
@@ -17,7 +17,6 @@ solved =[
          int(timus.number),
          int(codechef.number),
          int(atcoder.number),
-         int(vjudge.number1),
          int(vjudge.number2),
          ]
 
@@ -33,7 +32,6 @@ usernames =[cses.cses_username,
             timus.id,
             codechef.username,
             atcoder.username,
-            vjudge.username_1,
             vjudge.username_2
             ]
 urls = [cses.cses_url, 
@@ -47,7 +45,6 @@ urls = [cses.cses_url,
         timus.url, 
         codechef.url,
         atcoder.profile_url,
-        vjudge.url_1,
         vjudge.url_2
         ]
 

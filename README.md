@@ -8,8 +8,6 @@ A static problem-solving profile creator for portfolio building
 - fillup the .env-copy file and rename it to .env
 
 ```py
-hr_password='<hackerrank-password>'
-
 cf_api_key = '<create and copy api key using your codeforces account and paste it here>'
 cf_api_secret = '<create and copy api secret using your codeforces account and paste it here>'
 ```
