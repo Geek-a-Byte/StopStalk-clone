@@ -15,35 +15,78 @@ payload = {
 'password': os.getenv("hr_password"), #<-- your password
 'remember':'1' 
 }
+import requests
+from bs4 import BeautifulSoup as bs
+import lxml
+import json
 
-base_url = "https://www.hackerrank.com/"
-user_agent = "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.0.0 Safari/537.36"
-login_url = base_url + "auth/login"
-submissions_url = base_url + "rest/contests/master/submissions/?offset={}&limit={}"
-hackos_url= base_url + "rest/hackers/{}/hackos/?offset={}&limit={}"
+#header string picked from chrome
+headerString='''
+{
+    "user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/85.0.4183.83 Safari/537.36"
+}
+'''
+d = json.loads(headerString)
 
-username, password = payload['username'], payload['password']
-# pages, timeout = 300,10
 
-session = requests.Session()  # log in
-logon_response = session.post(
-    login_url, auth=(username, password), headers={"user-agent": user_agent}
-)
-cookies, headers = session.cookies.get_dict(), logon_response.request.headers
-logon_json = logon_response.json()  # handle errors
-print(logon_response.text)
-# r = session.get(submissions_url.format(0, 1000), headers=headers)
-r2 = session.get(hackos_url.format(username,0, 1000), headers=headers)
+# Login URL
+login_url = 'https://www.hackerrank.com/auth/login'
 
-print(r2.status_code)
-datum = r2.json()['models']
+#creating session
+s = requests.Session()
+r = s.get(login_url, headers=d)
 
-# print(datum)
-number=0
-total_count=set();
+# Get the csrf-token from meta tag
+soup = bs(r.text,'lxml')
+# csrf_token = soup.select_one('meta[name="csrf-token"]')['content']
+
+# # Page header
+# head = { 
+#     'Content-Type':'application/x-www-form-urlencoded',
+#     'User-Agent':'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/69.0.3497.100 Safari/537.36'
+# }
+
+# # Set CSRF-Token
+# head['X-CSRF-Token'] = csrf_token
+# head['X-Requested-With'] = 'XMLHttpRequest'
+
+
+# Get the page cookie
+cookie = r.cookies
+
+
+# Build the login payload
+payload = {
+'username': 'geek_a_byte32', #<-- your username
+'password': os.environ.get('hr_password'), #<-- your password
+'remember':'1' 
+}
+
+# # Try to login to the page
+r = s.post(login_url, cookies=cookie, data=payload, headers=d)
+# soup = bs(r.text,'lxml')
+# print(soup)
+print(r.text)
+
+
+url2='https://www.hackerrank.com/rest/hackers/geek_a_byte32/badges'
+
+
+# Try to get a page behind the login page
+r = s.get(url2, headers=d)
+
+print(r.status_code)
+
+# # Check if login was successful, if so there have to be an element with the id menu_row2
+soup = bs(r.text, 'lxml')
+
+# Parse the response JSON
+datum = r.json()['models']
+
+total_count=0;
 # Print the parsed data
 for data in datum:
-  if '/challenges/' in data['link']:
-    total_count.add(data['id'])
-
-number=len(total_count)
+    print(data['badge_name'],end=' ')
+    print(data['solved'])
+    total_count+=data['solved']
+print(total_count)
