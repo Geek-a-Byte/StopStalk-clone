@@ -13,7 +13,8 @@ if cses_response.status_code != 200:
     
 # Parse the HTML content using BeautifulSoup
 cses_soup = BeautifulSoup(cses_response.content, "html.parser")
-
+# init so that if a user doesn't solve any problem it shows 0
+cses = 0
 
 # cses
 table = cses_soup.find_all('table')
@@ -24,4 +25,4 @@ df2 = pd.read_html(str(table))[2]
 
 df = pd.DataFrame(df1)
 cses = df.iloc[0]['solved tasks']
-print(f"{cses_username} has solved {cses} problems on CC")
+print(f"{cses_username} has solved {cses} problems on cses")
