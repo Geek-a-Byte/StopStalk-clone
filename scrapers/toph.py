@@ -10,7 +10,7 @@ response = requests.get(url)
 
 # Check if the request was successful
 if response.status_code != 200:
-    print("Failed to fetch data from the CSES API")
+    print("Failed to fetch data from the TOPH API")
     exit()
 
 
