@@ -32,4 +32,4 @@ for data in datum:
      empty_set.add(data[1])
 
 uva=len(empty_set)
-print(f"{username} has solved {uva} problems on CC")
+print(f"{username} has solved {uva} problems on UVA")
